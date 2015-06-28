@@ -1,14 +1,119 @@
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" />
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<!-- Index CSS -->
+<link href="css/index.css" rel="stylesheet" />
+
+<!-- Custom Stules for navbar -->
+<link href="css/navbar-fixed-top.css" rel="stylesheet" />
+<title>Bride & Groom | Home Page</title>
+</head>
+
+<body>
+<!-- Start of NavBar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <ul class="nav navbar-nav">
+        <li class="dropdown"> <a class="navbar-brand" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bridengroom Company<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Join Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Nothing is here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="pull-left">
+      <form class="navbar-form pull-left" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" />
+          <div class="input-group-btn">
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More Options Here<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Join Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Nothing is here</a></li>
+          </ul>
+        </li> !--> <!-- Drop down menu on the right !-->
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-push-8">
+      <div class="col-md-12">
+        <div>
+          <div class="panel-body">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required="">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required="">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-9">
+                  <div class="checkbox">
+                    <label class="">
+                      <input type="checkbox" class="">
+                      Remember me</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group last">
+                <div class="col-sm-9">
+                  <button type="submit" class="btn btn-success btn-sm">Sign in</button>
+                  <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-offset-1">Not Registered? <a href="#" class="">Register here</a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron col-sm-8 col-sm-pull-4">
+      <h1>Bride&groom</h1>
+      <p>The <strong>easiest</strong> and <strong>most convenient</strong> way to plan the wedding yourself assisted by our:</p>
+      <p><strong>1. Customisable 12 months Wedding Checklist<br />
+      2. Wedding Budgeter</strong></p>
+      <p>From venues, wedding dresses to creative services such as 3D printed cakes & photobooth, all you need for your wedding is here!</p>
+    </div>
+  </div>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+<!-- Bootstrap core JavaScript --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.js"></script> 
+<!-- IE10 Windows 10 bug workaround --> 
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
