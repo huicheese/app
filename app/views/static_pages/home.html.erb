@@ -56,10 +56,10 @@
             <li><a href="#">Nothing is here</a></li>
           </ul>
         </li> !--> <!-- Drop down menu on the right !-->
-         
-        <li><span class="glyphicon glyphicon-user"><%= link_to "Sign Up", signup_path %></span></li>
-        
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+<!--          <span class="glyphicon glyphicon-user"></span> -->
+<!--         <span class="glyphicon glyphicon-log-in"></span> -->
+        <li><%= link_to "Sign Up", signup_path %></li>
+        <li><%= link_to "Login", login_path %></li>
       </ul>
     </div>
   </div>
@@ -69,31 +69,33 @@
     <div class="col-sm-4 col-sm-push-8">
       <div class="col-md-12">
         <div>
+          <%= form_for(:session, url: login_path) do |f| %>
           <div class="panel-body">
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <div class="col-sm-9">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required="">
+                  <%= f.email_field :email, class: 'form-control' %>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-9">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required="">
+                  <%= f.password_field :password, class: 'form-control' %>
+<!--                   <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required=""> -->
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-9">
                   <div class="checkbox">
                     <label class="">
-                      <input type="checkbox" class="">
-                      Remember me</label>
+<!--                       <input type="checkbox" class="">Remember me</label> -->
                   </div>
                 </div>
               </div>
               <div class="form-group last">
                 <div class="col-sm-9">
-                  <button type="submit" class="btn btn-success btn-sm">Sign in</button>
-                  <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                  <%= f.submit "Log in", class: "btn btn-primary" %>
+<!--                   <button type="submit" class="btn btn-success btn-sm">Sign in</button> -->
+                  <% end %>
                 </div>
               </div>
             </form>
