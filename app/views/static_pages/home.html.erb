@@ -56,7 +56,9 @@
             <li><a href="#">Nothing is here</a></li>
           </ul>
         </li> !--> <!-- Drop down menu on the right !-->
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+         
+        <li><span class="glyphicon glyphicon-user"><%= link_to "Sign Up", signup_path %></span></li>
+        
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
@@ -96,7 +98,8 @@
               </div>
             </form>
           </div>
-          <div class="col-sm-offset-1">Not Registered? <a href="#" class="">Register here</a> </div>
+         
+          <div class="col-sm-offset-1">Not Registered?  <%= link_to "Register here!", signup_path %> </div>
         </div>
       </div>
     </div>
